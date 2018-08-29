@@ -1,0 +1,3 @@
+[submodule "searx/data/spdx"]
+	path = searx/data/spdx
+	url = https://github.com/spdx/license-list-XML.git

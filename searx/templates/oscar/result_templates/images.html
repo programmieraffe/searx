@@ -13,14 +13,20 @@
             </div>
             <div class="modal-body">
                 <img class="img-responsive center-block" src="{% if result.thumbnail_src %}{{ image_proxify(result.thumbnail_src) }}{% else %}{{ image_proxify(result.img_src) }}{% endif %}" alt="{{ result.title|striptags }}">
-                {% if result.author %}<span class="photo-author">{{ result.author }}</span><br />{% endif %}
+                {% if result.author %}<span class="photo-author">{{ result.author|safe }}</span><br />{% endif %}
                 {% if result.content %}
-                    <p class="result-content">
-                        {{ result.content }}
-                    </p>
+                    <div class="result-content">
+                        {{ result.content|safe }}
+                    </div>
                 {% endif %}
             </div>
             <div class="modal-footer">
+            {% if result.license %}
+                <div class="clearfix"></div>
+                <p class="text-muted pull-right"><a class="label label-default" href="{{ result.license.url }}">{{ result.license.full_name }}</a></p>
+
+                <p class="text-muted pull-right">{% for ico in result.license.icons %} <img src="{{ ico }}" width=20px/> {% endfor %}</p>
+            {% endif %}
                 <div class="clearfix"></div>
                 <span class="label label-default pull-right">{{ result.engine }}</span>
                 <p class="text-muted pull-left">{{ result.pretty_url }}</p>
