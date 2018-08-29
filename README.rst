@@ -1,3 +1,12 @@
+A searx fork for OER
+====================
+
+This is a proof of concept for connecting several free license centric repositories and other sites.
+
+Main change is adding the SPDX License repository. (do a recursive checkout!)
+With this, we can (try) to match openly licenced content and provide this information to users.
+
+
 searx
 =====
 
