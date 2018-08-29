@@ -487,9 +487,9 @@ engines:
     shortcut : oap
     timeout: 5.0
 
-  - name : openstreetmap
-    engine : openstreetmap
-    shortcut : osm
+#  - name : openstreetmap
+#    engine : openstreetmap
+#    shortcut : osm
 
   - name : openrepos
     engine : xpath
@@ -510,9 +510,9 @@ engines:
 # Default is not to hide obsolete structures
 #    hide_obsolete : False
 
-  - name : photon
-    engine : photon
-    shortcut : ph
+#  - name : photon
+#    engine : photon
+#    shortcut : ph
 
 #  - name : piratebay
 #    engine : piratebay
