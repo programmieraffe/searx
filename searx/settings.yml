@@ -68,6 +68,11 @@ engines:
     engine : tutory
     categories : images
 
+  - name : oerworldmap
+    engine : oerworldmap
+    categories : map
+    shortcut : oerwm
+
   - name : wikimedia
     engine : wikimedia
     shortcut : wime
