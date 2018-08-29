@@ -67,6 +67,8 @@ def response(resp):
 
         # add rest of adressdata, if something is already found
         location = prop['location']
+        if type(location) == list:
+            location = location[0]
         if 'address' in location:
             a = location['address']
             address.update({'house_number': 1,  # TODO, regex? addresses are weird. Better not do that.
