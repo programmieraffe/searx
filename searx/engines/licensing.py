@@ -23,7 +23,7 @@ class SpdxLicenses:
         if up in self.name2file:
             cc_match = self.cc_splitter.match(up)
             if cc_match:
-                return CreativeCommonsLicense(cc_match.group(1).lower(), "FULL NAME HERE", cc_match.group(2))
+                return CreativeCommonsLicense(cc_match.group(1).lower(), "Creative Commons", cc_match.group(2))
 
             return LicenseInfo(license_str, license_str, [], '')
         elif 'PUBLIC-DOMAIN' == up:

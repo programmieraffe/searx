@@ -3,6 +3,11 @@
 <a href="{{ result.img_src }}" {% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %} data-toggle="modal" data-target="#modal-{{ index }}-{{pageno}}">
     <img src="{% if result.thumbnail_src %}{{ image_proxify(result.thumbnail_src) }}{% else %}{{ image_proxify(result.img_src) }}{% endif %}" alt="{{ result.title|striptags }}" title="{{ result.title|striptags }}" class="img-thumbnail">
 </a>
+{% if result.license %}
+    <div class="clearfix"></div>
+    <p class="text-muted pull-left"><a class="label label-default" href="{{ result.license.url }}">{{ result.license.full_name }}</a></p>
+    <p class="text-muted pull-right">{% for ico in result.license.icons %} <img src="{{ ico }}" width=20px/> {% endfor %}</p>
+{% endif %}
 
 <div class="modal fade" id="modal-{{ index }}-{{ pageno }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -24,7 +29,6 @@
             {% if result.license %}
                 <div class="clearfix"></div>
                 <p class="text-muted pull-right"><a class="label label-default" href="{{ result.license.url }}">{{ result.license.full_name }}</a></p>
-
                 <p class="text-muted pull-right">{% for ico in result.license.icons %} <img src="{{ ico }}" width=20px/> {% endfor %}</p>
             {% endif %}
                 <div class="clearfix"></div>
