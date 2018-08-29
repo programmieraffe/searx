@@ -33,7 +33,7 @@ embedded_url = '<iframe data-src="//player.vimeo.com/video/{videoid}" ' +\
 
 # do search-request
 def request(query, params):
-    params['headers'] = {'Authorization': 'Bearer XXX'}
+    params['headers'] = {'Authorization': 'Bearer XXX'}  # TODO: add api_key to config
     params['url'] = search_url.format(pageno=params['pageno'],
                                       query=urlencode({'q': query}))
     params['url'] = 'https://api.vimeo.com/videos?filter=CC'
@@ -53,11 +53,12 @@ def response(resp):
         thumbnail = result['pictures']['sizes'][-1]['link']
         publishedDate = parser.parse(result['created_time'])
         embedded = result['embed']['html']
+        description = result.get('description','')
 
         # append result
         results.append({'url': url,
                         'title': title,
-                        'content': 'asd',
+                        'content': description,
                         'template': 'videos.html',
                         'publishedDate': publishedDate,
                         'embedded': embedded,
