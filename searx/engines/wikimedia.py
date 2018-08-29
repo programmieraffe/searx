@@ -16,7 +16,14 @@ from searx.utils import match_language
 from searx.engines import licensing
 import urllib.parse
 from searx import logger
-import re
+
+"""
+For more info about the search parameters, visit:
+https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&prop=imageinfo%7Cimages%7Cdescription%7Cpageimages&titles=Cat&generator=images&iiprop=timestamp%7Cuser%7Curl%7Cextmetadata%7Cmediatype%7Ccanonicaltitle%7Cmime&iimetadataversion=latest&iiextmetadatafilter=&piprop=thumbnail%7Cname&pithumbsize=300
+
+you can play with the parameters and maybe add some more information about the results.
+Especially pagination would be incredibly useful
+"""
 
 
 log = logger.getChild('wikimedia')
