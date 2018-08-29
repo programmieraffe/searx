@@ -254,15 +254,15 @@ engines:
 #    categories : videos
 #    disabled : True
 
-  - name : flickr
-    categories : images
-    shortcut : fl
+#  - name : flickr
+#    categories : images
+#    shortcut : fl
 # You can use the engine using the official stable API, but you need an API key
 # See : https://www.flickr.com/services/apps/create/
 #    engine : flickr
 #    api_key: 'apikey' # required!
 # Or you can use the html non-stable engine, activated by default
-    engine : flickr_noapi
+#    engine : flickr_noapi
 
 #https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&photo_id=29372415177&api_key=7c170335d558cb30d1619ca38fabbbc3
 #https://api.flickr.com/services/rest/?method=flickr.photos.search&text=phone&api_key=7c170335d558cb30d1619ca38fabbbc3&license=1,2,3,4,5,6,7,8,9,10&media=photos&per_page=10
