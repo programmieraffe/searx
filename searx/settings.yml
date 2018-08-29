@@ -614,8 +614,8 @@ engines:
 
 #  - name : ixquick
 #    engine : startpage
-    base_url : 'https://www.ixquick.eu/'
-    search_url : 'https://www.ixquick.eu/do/search'
+#    base_url : 'https://www.ixquick.eu/'
+#    search_url : 'https://www.ixquick.eu/do/search'
 #    shortcut : iq
 #    timeout : 6.0
 #    disabled : True
@@ -684,9 +684,9 @@ engines:
 #    engine : dailymotion
 #    shortcut : dm
 
-  - name : vimeo
-    engine : vimeo
-    shortcut : vm
+#  - name : vimeo
+#    engine : vimeo
+#    shortcut : vm
 
 #  - name : wolframalpha
 #    shortcut : wa
