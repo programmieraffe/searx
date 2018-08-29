@@ -58,7 +58,7 @@ engines:
     content_xpath : ./a/img
     thumbnail_src_xpath : ./a/img/@src
     img_src_xpath : ./a/img/@srcset
-    categories : images_oer
+    categories : images
     timeout : 7.0
     paging : True
     disabled : False
